@@ -30,14 +30,14 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             <li>WhatsApp: 0812-3456-7890 (dummy)</li>
             <li>Email: info@tukangta.co (dummy)</li>
-            <li>
+            <li>Instagram:&nbsp;
               <a
-                href="https://instagram.com/Instalatir_listrik"
+                href="https://instagram.com/tukangta.co"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-brand-gold transition-colors"
               >
-                @Instalatir_listrik
+                Instalatir_listrik
               </a>
             </li>
           </ul>
