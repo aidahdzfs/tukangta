@@ -1,9 +1,20 @@
+import { Zap, Plug, Wrench, ClipboardCheck } from 'lucide-react';
+
+const iconMap = {
+  zap: Zap,
+  plug: Plug,
+  wrench: Wrench,
+  'clipboard-check': ClipboardCheck,
+};
+
 export default function ServiceCard({ number, title, description, icon }) {
+  const Icon = iconMap[icon];
+
   return (
     <div className="group border-l-2 border-brand-line pl-5 py-2 hover:border-brand-gold hover:translate-x-1 transition-all duration-300">
-      <div className="flex items-baseline gap-3 mb-2">
+      <div className="flex items-center gap-3 mb-2">
         {number && <span className="text-xs font-mono text-brand-slate/40">{number}</span>}
-        {icon && <span className="text-2xl">{icon}</span>}
+        {Icon && <Icon className="w-6 h-6 text-brand-gold" />}
       </div>
       <h3 className="font-semibold text-lg text-brand-blue-deep mb-1 group-hover:text-brand-blue transition-colors">
         {title}

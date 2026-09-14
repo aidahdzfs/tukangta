@@ -21,25 +21,25 @@ export default function KontakPage() {
         <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-brand-line space-y-4">
           <div>
             <p className="text-sm text-brand-slate/70">Alamat</p>
-            <p className="text-brand-blue-deep font-medium">Jl. Contoh Dummy No. 12, Kota Anda (dummy)</p>
+            <p className="text-brand-blue-deep font-medium">Makassar, Sulawesi Selatan, Indonesia</p>
           </div>
           <div>
             <p className="text-sm text-brand-slate/70">Jam Operasional</p>
-            <p className="text-brand-blue-deep font-medium">Senin–Sabtu, 08.00–17.00 (dummy)</p>
+            <p className="text-brand-blue-deep font-medium">Setiap hari, 10.00–00.00</p>
           </div>
           <div>
             <p className="text-sm text-brand-slate/70">Email</p>
-            <p className="text-brand-blue-deep font-medium">info@tukangta.co (dummy)</p>
+            <p className="text-brand-blue-deep font-medium">tukangta.co13@gmail.com</p>
           </div>
           <div>
             <p className="text-sm text-brand-slate/70">Instagram</p>
             <a
-              href="https://instagram.com/Instalatir_listrik"
+              href="https://instagram.com/tukangta.co"
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-blue font-medium hover:underline"
             >
-              @Instalatir_listrik
+              @tukangta.co
             </a>
           </div>
         </div>

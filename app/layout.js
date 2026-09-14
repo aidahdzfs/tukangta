@@ -12,8 +12,8 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: "Tukang Listrik Ta' — Jasa Instalasi Listrik Terpercaya",
-    template: "%s | Tukang Listrik Ta'",
+    default: "Tukangta.co — Jasa Instalasi Listrik Terpercaya",
+    template: "%s | Tukangta.co",
   },
   description:
     "Jasa instalasi listrik, tambah daya, dan perbaikan kelistrikan rumah & bangunan. Tukang bersertifikat, rapi, dan terpercaya.",
