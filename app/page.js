@@ -62,7 +62,7 @@ export default function Home() {
       {/* Kenapa Pilih Kami — masih terang, aksen border bukan blok gelap penuh */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <SectionHeading title="Dikerjakan oleh tukang bersertifikat" />
+          <SectionHeading title="Dikerjakan oleh teknisi bersertifikat" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { label: 'Bersertifikat' },

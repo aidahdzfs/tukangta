@@ -28,7 +28,7 @@ export default function Footer() {
           <Link href="/" className="flex items-center gap-1">
             <Image src="/logo.png" alt="Logo Tukang Listrik Ta'" width={70} height={70} />
             <div className='grid'>
-              <span className="text-white font-semibold text-lg ">Tukang Listrik Ta&apos;</span>
+              <span className="text-white font-semibold text-lg ">Tukangta.co</span>
               <span className="text-sm leading-relaxed max-w-xs">Terpercaya, Rapi, dan Berkualitas</span>
             </div>
           </Link>
@@ -79,7 +79,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
-          <p>&copy; {new Date().getFullYear()} Tukang Listrik Ta&apos;. Semua hak dilindungi.</p>
+          <p>&copy; {new Date().getFullYear()} Tukangta.co Semua hak dilindungi.</p>
           <a href="#top" className="flex items-center gap-1.5 hover:text-brand-gold transition-colors">
             Kembali ke atas <ArrowUp className="w-3.5 h-3.5" />
           </a>
