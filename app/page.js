@@ -5,8 +5,14 @@ import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { services } from '@/lib/services-data';
 import { ArrowDown } from 'lucide-react';
+import { supabase } from '@/lib/supabase';
 
-export default function Home() {
+export default async function Home() {
+  const { data: testimonials } = await supabase
+    .from('testimonials')
+    .select('*')
+    .order('created_at', { ascending: false})
+    .limit(6);
   return (
     <>
       {/* Hero — center, tanpa ikon petir, teks diringkas */}
@@ -84,9 +90,26 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeading title="Apa kata pelanggan kami" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TestimonialCard name="Nama Dummy 1" role="Pemilik rumah" quote="Testimoni dummy — pengerjaan rapi dan cepat." />
-            <TestimonialCard name="Nama Dummy 2" role="Pemilik toko" quote="Testimoni dummy — teknisinya ramah dan profesional." />
-            <TestimonialCard name="Nama Dummy 3" role="Pemilik rumah" quote="Testimoni dummy — harga jelas, hasil memuaskan." />
+            {testimonials && testimonials.length > 0 ? (
+              testimonials.map((t) => (
+                <TestimonialCard key={t.id} name={t.name} role={t.role} quote={t.quote} />
+              ))
+            ) : (
+              <p className="text-brand-slate text-center col-span-3">
+                Belum ada testimoni. Jadilah yang pertama!
+              </p>
+            )}
+            <div className="col-span-full flex flex-col items-center text-center gap-5 py-6">
+              <p className="text-brand-slate/70 text-sm">
+                Sudah pernah menggunakan jasa kami? Bagikan pengalaman Anda lewat tombol di bawah.
+              </p>
+              <Link
+                href="/testimoni"
+                className="inline-block bg-brand-gold text-brand-blue-deep font-semibold px-6 py-2.5 rounded-full hover:shadow-lg hover:shadow-brand-gold/30 hover:-translate-y-0.5 transition-all"
+              >
+                Isi Testimoni
+              </Link>
+            </div>
           </div>
         </div>
       </section>
