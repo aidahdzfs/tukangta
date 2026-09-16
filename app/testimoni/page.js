@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { Send, CheckCircle2 } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
-import { supabase } from '@/lib/supabase';
 
 export default function TestimoniPage() {
   const [form, setForm] = useState({ name: '', role: '', quote: '' });
@@ -20,13 +19,15 @@ export default function TestimoniPage() {
     setLoading(true);
     setError('');
 
-    const { error: insertError } = await supabase.from('testimonials').insert([
-      { name: form.name, role: form.role, quote: form.quote },
-    ]);
+    const res = await fetch('/api/testimoni', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
 
     setLoading(false);
 
-    if (insertError) {
+    if (!res.ok) {
       setError('Gagal mengirim testimoni. Coba lagi sebentar lagi.');
       return;
     }
