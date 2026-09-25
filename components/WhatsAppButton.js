@@ -6,7 +6,7 @@ export default function WhatsAppButton({
   showArrow = false,
   className=''
 }) {
-  const phoneNumber = '62895338547564';
+  const phoneNumber = '6289527969446';
   const encodedMessage = encodeURIComponent(message);
 
   return (
